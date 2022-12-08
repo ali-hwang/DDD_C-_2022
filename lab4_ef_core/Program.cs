@@ -19,8 +19,13 @@ dbpath.SaveChanges();
 
 
 
-var blogs = dbpath.Blogs.OrderBy(b => b.BlogId);
-foreach(var db in blogs)
+Console.WriteLine("將資料讀回");
+var blogs = db.Blogs!.OrderBy(b => b.BlogId);
+foreach (var b in blogs)
 {
-    Console.WriteLine($"{db.BlogId},{db.Uri}");
+    Console.WriteLine($"{b.BlogId},{b.Uri}");
+    foreach (var p in b.Posts)
+    {
+        Console.WriteLine($"..{p.Title}/{p.Content}");
+    }
 }
