@@ -3,10 +3,10 @@ using Model;
 var dbpath = new BlogContext();
 Console.WriteLine($"path:{dbpath.DBPath}");
 
-//dbpath.Add(new Blog{Uri="www.systex.com.tw"});
-//dbpath.Add(new Blog{Uri="www.systex1.com.tw"});
-//dbpath.Add(new Blog{Uri="www.systex2.com.tw"});
-//dbpath.SaveChanges();
+dbpath.Add(new Blog{Uri="www.systex.com.tw"});
+dbpath.Add(new Blog{Uri="www.systex1.com.tw"});
+dbpath.Add(new Blog{Uri="www.systex2.com.tw"});
+dbpath.SaveChanges();
 
 Console.WriteLine("修改一下資料");
 var blog = dbpath.Blogs!.OrderBy(b => b.BlogId).Last();
