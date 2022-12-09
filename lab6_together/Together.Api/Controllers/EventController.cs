@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Together.Contract.Controller;
 
 namespace Together.Api.Controller;
 
@@ -6,14 +7,14 @@ namespace Together.Api.Controller;
 [Route("api")]
 public class EventController : ControllerBase
 {
-    [Route("add-event")]
-    public IActionResult AddEvent()
+    [HttpPost("add-event")]
+    public IActionResult AddEvent(AddEventRequest request)
     {
-        return Ok();
+        return Ok(request);
     }
-    [Route("query-event")]
-    public IActionResult QueryEvent()
+    [HttpPost("query-event")]
+    public IActionResult QueryEvent(QueryEventRequest request)
     {
-        return Ok();
+        return Ok(request);
     }
 }
