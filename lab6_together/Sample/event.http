@@ -1,1 +1,5 @@
 GET https://localhost:7101/api/add-event
+
+
+###
+GET https://localhost:7101/api/Query-event
