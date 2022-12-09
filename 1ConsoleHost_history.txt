@@ -1,0 +1,182 @@
+git --version
+git log
+git log --pretty=online
+git log --pretty=oneline
+md test
+cd test
+git log
+cd..
+cd ..
+git log
+cd .\DDD_C#\
+dotnet new sln -o lab1_unittest
+cd lab1_unittest
+dotnet new classlib -o PrimeService
+dotnet new nunit -o PrimeService.Tests
+dotnet build
+cd ..
+dotnet build
+cd .\lab1_unittest\
+dotnet sln add .\PrimeService\PrimeService.csproj
+dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj
+dotnet build
+dotnet add .\PrimeService.Tests\PrimeService.Tests.csproj reference .\PrimeService\PrimeService.csproj
+dotnet build
+dotnet test
+dotnet list
+dotnet --help
+dotnet build
+dotnet test
+dotnet build
+dotnet test
+dotnet test --filter primetest1
+dotnet test --filter prime.service.test.primetest1
+dotnet test --filter Prime.Service.Test.PrimeTest1
+dotnet test
+git log --pretty=oneline
+git remote add origin https://github.com/ali-hwang/DDD_C-_2022.git
+git remote -v
+git push -u origin master
+dotnet new webapi -o lab2_rest_api
+dotnet run --project .\lab2_rest_api\
+dotnet dev-certs https --trust
+dotnet run --project .\lab2_rest_api\
+dotnet new console -o lab3_reverse_package_search
+dotnet build
+cd .\lab3_reverse_package_search\
+code .
+dotnet build
+dotnet add . package Microsoft.Extensions.DependencyInjection.Abstractions
+dotnet build
+dotnet add . package Microsoft.Extensions.DependencyInjection.Abstractions
+dotnet build
+cd ..
+dotnet new console -o lab4_ef_core
+cd .\lab4_ef_core\
+code .
+dotnet add package Microsoft.EntityFramework.Sqlite
+dotnet add package Microsoft.EntityFrameorkCore.Sqlite
+dotnet add package Microsoft.EntityFrameworkCore.Sqlite
+dotnet run
+cd ..
+git push -u origin master
+cd .\lab4_ef_core\
+dotnet build
+cd..
+git push -u origin master
+cd .\lab4_ef_core\
+dotnet build
+dotnet run
+dotnet tool install --global dotnet-ef
+dotnet-ef --version
+dotnet add package Microsoft.EntityFrameworkCore.design
+dotnet add package Microsoft.EntityFrameworkCore.Design
+dotnet build
+dotnet run
+dotnet-ef --version
+dotnet ef migrations add InitialCreate
+dotnet build
+dotnet ef migrations add InitialCreate
+dotnet ef database update
+dotnet build
+dotnet run
+dotnet build
+dotnet run
+dotnet build
+dotnet run
+dotnet build
+dotnet run
+dotnet ef migrations add InitialCreate
+dotnet run
+dotnet build
+dotnet run
+dotnet build
+dotnet ef migrations add InitialCreate
+dotnet run
+dotnet ef migrations add InitialCreate2
+dotnet ef database update
+dotnet build
+dotnet run
+dotnet ef migrations add InitialCreate
+dotnet ef database update
+dotnet build
+dotnet run
+dotnet ef migrations add addPost
+dotnet ef database update
+dotnet ef migrations add addPost
+dotnet ef migrations add addPost2
+dotnet ef database update
+dotnet ef migrations add addPost3
+dotnet ef database update
+dotnet build
+dotnet run
+dotnet build
+dotnet run
+dotnet ef migrations add addPost
+dotnet ef database update
+dotnet build
+dotnet run
+dotnet ef database update
+dotnet build
+dotnet run
+dotnet ef migrations add InitialCreate
+dotnet ef database update
+dotnet ef migrations add addposts
+dotnet ef database update
+dotnet build
+dotnet run
+dotnet clean
+dotnet ef migrations add fixup
+dotnet ef database update
+dotnet build
+dotnet run
+dotnet build
+dotnet run
+dotnet build
+dotnet run
+dotnet ef migrations add InitialCreate
+dotnet ef database update
+dotnet build
+dotnet run
+dotnet build
+dotnet run
+cd ..
+dotnet new mvc -o lab5_mvc
+cd .\lab4_ef_core\
+cd..
+code .\lab5_mvc\
+dotnet build
+dotnet run
+cd .\lab4_ef_core\
+dotnet ef migrations add fixup
+dotnet ef database update
+dotnet build
+dotnet run
+dotnet build
+dotnet run
+dotnet build
+dotnet run
+dotnet build
+dotnet run
+dotnet build
+dotnet run
+cd ..
+git push -u origin master
+dotnet new sln -o lab6_together
+cd .\lab6_together\
+code .
+dotnet new webapi -o Together.Api
+dotnet new classlib -o Together.Contract
+dotnet new classlib -o Together.Infrastructure
+dotnet new classlib -o Together.Application
+dotnet new classlib -o Together.Domain
+ls -r **\*.csp*
+ls -r **\*.csproj
+ls -r *.csproj
+dotnet sln add (ls -r *.csproj)
+dotnet build
+dotnet add .\Together.Api\ reference .\Together.Application\ .\Together.Contract\ .\Together.Infrastructure\
+dotnet add .\Together.Infrastructure\ reference .\Together.Application\
+dotnet add .\Together.Application\ reference .\Together.Domain\
+dotnet build
+dotnet run --project .\Together.Api\
